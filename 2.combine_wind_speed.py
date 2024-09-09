@@ -15,8 +15,8 @@ combined_df = pd.merge(door_data, window_data, on=['Date', 'Time'], how='inner')
 output_path = f'{v.wind_path_out}'
 combined_df.to_csv(output_path, index=False)
 
-print("""
+print(f"""
       ==================================================================================
-      Finished combining wind speed files :""", output_path, """
+      Finished combining wind speed files :{output_path}
       ==================================================================================
       """)
